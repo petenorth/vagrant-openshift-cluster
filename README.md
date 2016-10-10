@@ -5,27 +5,27 @@ Pre-requisites
 2. VirtualBox installed ( I run with 5.0.14 which is also a bit old)
 3. Install following vagrant plugins:
 
-landrush (1.1.2)
-vagrant-hostmanager (1.8.5)
+* landrush (1.1.2)
+* vagrant-hostmanager (1.8.5)
 
 Installation
 ------------
 
-git clone xxxxxxxxxxxxxxxx
-cd <some dir>
-vagrant up
-vagrant ssh admin1
-su - (when prompted the password is 'redhat')
-/vagrant/deploy.sh (when prompted respond with 'yes' and the password for the remote machines is 'redhat')
+    git clone https://github.com/petenorth/vagrant-openshift-cluster
+    cd vagrant-openshift-cluster
+    vagrant up
+    vagrant ssh admin1
+    su - (when prompted the password is 'redhat')
+    /vagrant/deploy.sh (when prompted respond with 'yes' and the password for the remote machines is 'redhat')
 
 An ansible playbook will start (this is openshift installing), it uses the etc_ansible_hosts file of the git repo copied to /etc/ansible/hosts.
 
-This creates an install with one master and two nodes. The NFS share gets created on admin1.
+The hosts file creates an install with one master and two nodes. The NFS share gets created on admin1.
 
 I think because the vagrant hosts' primary ethernet network card eth0 is that of the host machines the host/ip address resolution doesn't work out of the box meaning that
 
-1) you must click on continue and ignore the problem with the hosts names and ip address resolutions.
-2) the /etc/ansible/hosts file makes use of the 'openshift_ip' property to force the use of the eth1 network interface which is using the 192.168.50.x ip addresses of the vagrant private network.
+1. you must click on continue and ignore the problem with the hosts names and ip address resolutions.
+2. the /etc/ansible/hosts file makes use of the 'openshift_ip' property to force the use of the eth1 network interface which is using the 192.168.50.x ip addresses of the vagrant private network.
 
 Once complete
 
@@ -47,7 +47,7 @@ then update the dns entries thus
 
 In the web console create a PHP app and wait for it to complete the deployment. Navigate to the overview page for the test app and click on the link for the service i.e.
 
-cakephp-example-test.apps.example.com
+    cakephp-example-test.apps.example.com
 
 Notes
 -----
