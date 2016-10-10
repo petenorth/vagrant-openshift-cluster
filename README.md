@@ -34,9 +34,9 @@ Logon to https://master1.example.com:8443 as admin/admin, create a project test 
 
 ssh to master1:
 
-ssh master1
-oc login -u=system:admin
-oc annotate namespace test openshift.io/node-selector='region=primary' --overwrite
+    ssh master1
+    oc login -u=system:admin
+    oc annotate namespace test openshift.io/node-selector='region=primary' --overwrite
 
 On the host machine (the following assumes RHEL/Centos, other OS may differ) first verify the contents of /etc/dnsmasq.d/vagrant-landrush gives
 
