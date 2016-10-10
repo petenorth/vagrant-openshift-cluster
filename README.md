@@ -1,10 +1,10 @@
 Pre-requisites
 --------------
 
-1. Vagrant installed ( I run with 1.7.4 which is a bit old)
-2. VirtualBox installed ( I run with 5.0.14 which is also a bit old)
+* Vagrant installed ( I run with 1.7.4 which is a bit old)
+* VirtualBox installed ( I run with 5.0.14 which is also a bit old)
 
-Install following vagrant plugins:
+Install the following vagrant plugins:
 
 * landrush (1.1.2)
 * vagrant-hostmanager (1.8.5)
