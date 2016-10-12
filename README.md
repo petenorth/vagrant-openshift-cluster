@@ -1,3 +1,8 @@
+Overview
+--------
+
+This is a Vagrant based project that demonstrates an advanced Openshift Enterprise 3.3 install i.e. one using an Ansible playbook.
+
 Pre-requisites
 --------------
 
@@ -9,12 +14,18 @@ Install the following vagrant plugins:
 * landrush (1.1.2)
 * vagrant-hostmanager (1.8.5)
 
+Import a RHEL 7.2 box, the easiest way to do this is use the packet tool from hashicorp. The steps are described at
+
+https://stomp.colorado.edu/blog/blog/2015/12/24/on-building-red-hat-enterprise-linux-vagrant-boxes/
+
+The iso image that the vagrant image is created from should be the 'RHEL 7.2 Binary DVD' image on the Red Hat downloads site. The box name I have used in the Vagrantfile is 'rhel/7.2'
+
 Installation
 ------------
 
     git clone https://github.com/petenorth/vagrant-openshift-cluster
     cd vagrant-openshift-cluster
-    vagrant up
+    vagrant up (you will be prompted for your Red Hat account details and the sudo account password on the host during this process)
     vagrant ssh admin1
     su - (when prompted the password is 'redhat')
     /vagrant/deploy.sh (when prompted respond with 'yes' and the password for the remote machines is 'redhat')
