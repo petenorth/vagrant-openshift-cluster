@@ -3,9 +3,15 @@ Overview
 
 This is a Vagrant based project that demonstrates an advanced Openshift Enterprise 3.3 install i.e. one using an Ansible playbook.
 
+The documentation for the installation process can be found at
+
+https://docs.openshift.com/container-platform/3.3/install_config/install/planning.html
+
+
 Pre-requisites
 --------------
 
+* A Red Hat Account so that will be used to register the VMs via subscription manager.
 * Vagrant installed ( I run with 1.7.4 which is a bit old)
 * VirtualBox installed ( I run with 5.0.14 which is also a bit old)
 
