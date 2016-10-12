@@ -19,6 +19,7 @@ Install the following vagrant plugins:
 
 * landrush (1.1.2)
 * vagrant-hostmanager (1.8.5)
+* vagrant-registration (found within the Red Hat CDK 2.2)
 
 Import a RHEL 7.2 box, the easiest way to do this is use the packet tool from hashicorp. The steps are described at
 

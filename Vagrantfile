@@ -12,7 +12,7 @@ VAGRANTFILE_API_VERSION = '2'
 
 
 # Validate required plugins
-REQUIRED_PLUGINS = %w(vagrant-registration)
+REQUIRED_PLUGINS = %w(vagrant-registration vagrant-hostmanager landrush)
 errors = []
 
 def message(name)
@@ -30,10 +30,6 @@ NETWORK_BASE = '192.168.50'
 INTEGRATION_START_SEGMENT = 20
 
 $miscellany = <<SCRIPT
-#yum -y install wget git net-tools bind-utils iptables-services bridge-utils bash-completion
-#sudo cp /vagrant/yum.repos /etc/yum.repos.d/open.repo
-#yum clean all ; yum repolist
-#yum -y update
 echo "redhat" | sudo passwd root --stdin
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 sudo service sshd restart
