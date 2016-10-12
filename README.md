@@ -1,3 +1,8 @@
+Overview
+--------
+
+This main branch uses Openshift Origin (latest), there is an 'enterprise' branch of this project which uses Openshift Container Platform 3.3 (Openshift Enterprise).
+
 Pre-requisites
 --------------
 
