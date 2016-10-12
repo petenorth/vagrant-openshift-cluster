@@ -3,6 +3,7 @@ for host in admin1.example.com master1.example.com node1.example.com node2.examp
     do ssh-copy-id -i /root/.ssh/id_rsa.pub $host; \
     done
 ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml
+sudo ssh root@master1.example.com htpasswd -b -c /etc/origin/master/htpasswd admin admin123
 
 
 
