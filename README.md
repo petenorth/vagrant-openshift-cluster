@@ -1,3 +1,10 @@
+THIS REPOSITORY IS NO LONGER MAINTAINED.
+
+PLEASE USE THE VAGRANT FILES LOCATED AT
+
+https://github.com/openshift/openshift-ansible-contrib/tree/master/vagrant
+
+
 Overview
 --------
 
